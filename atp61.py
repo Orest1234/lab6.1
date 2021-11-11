@@ -5,18 +5,18 @@
 # Варіант 15
 import random
 
-
+# створення масиву
 def create(low, high, size):
     p = []
     for i in range(size):
         p.append(random.randint(low, high))
     return p
 
-
+# вивід в термінал
 def print_list(p):
     print('Список:', p)
 
-
+# розрахунки
 def calculation(p):
     index_list = []
     for i in range(len(p)):
@@ -26,25 +26,25 @@ def calculation(p):
             None
     return index_list
 
-
+# кількість елементів, які підходять за критерієм
 def amount(index_list):
     amnt = len(index_list)
     return amnt
 
-
+# сума елементів, які підходять за критерієм
 def summ(index_list, p):
     sum_number = 0
     for index in index_list:
         sum_number += p[index]
     return sum_number
 
-
+# заміна елементів які підходять по критерію
 def change(p, index_list):
     for index in index_list:
         p[index] = 0
     return p
 
-
+# головна функція
 def main():
     p = create(low=int('-20'), high=int('34'), size=int('20'))
     print_list(p)
@@ -58,3 +58,4 @@ def main():
 
 
 main()
+
